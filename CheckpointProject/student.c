@@ -83,12 +83,12 @@ for (int layer = 0; layer < 12; layer++) {
 			allStu[layer][classNum].head = NULL;
 		}
 	}
-    FILE* file;
-    errno_t err;
     //read the data from a file
-    err = fopen_s(&file, "students_with_class.txt", "r");
+    
+    
+    FILE* file = fopen("students_with_class.txt", "r");
    
-    if (err != 0) {
+    if (file == NULL) {
         printf("Error opening the file.\n");
         return 1;
     }
@@ -102,8 +102,8 @@ for (int layer = 0; layer < 12; layer++) {
         int layer, classNum;
         int grades[10];
 
-        int n = sscanf_s(buffer, "%s %s %s %d %d %d %d %d %d %d %d %d %d %d %d %d %d",
-            name, sizeof(name), lastName, sizeof(lastName), phoneNumber, sizeof(phoneNumber),
+        int n = sscanf(buffer, "%s %s %s %d %d %d %d %d %d %d %d %d %d %d %d %d %d",
+            name, lastName, phoneNumber,
             &layer, &classNum, &grades[0], &grades[1], &grades[2], &grades[3], &grades[4],
             &grades[5], &grades[6], &grades[7], &grades[8], &grades[9]);
 
