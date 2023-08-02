@@ -23,7 +23,6 @@ void deleteStudentByPhone(const char* number,const int level,const int classes);
 void deleteStudent();
 void editStudentGrade();
 void searchStudent();
-
 void printAllStudents();
 
 #endif // MENU_H

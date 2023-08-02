@@ -12,7 +12,7 @@ int main()
     
 
     //read the data from a file
-    FILE* file = fopen("students_with_class.txt", "r");
+    FILE* file = fopen("shortStu.txt", "r");
     if (file == NULL) {
         printf("Error opening the file.\n");
         return 1;

@@ -164,7 +164,6 @@ void deleteStudent()
     scanf("%s", number);
     printf("Enter level: ");
     scanf("%d", &level);
-    scanf("%s", number);
 	printf("Enter classes: ");
     scanf("%d", &classes);
     //checkPhone(number);
